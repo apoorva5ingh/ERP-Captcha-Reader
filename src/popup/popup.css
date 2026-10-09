@@ -1,0 +1,14 @@
+body{width:300px;margin:0;padding:12px 14px;font:13px/1.45 system-ui,"Segoe UI",Arial,sans-serif;color:#111827;background:#fff}
+h1{font-size:15px;margin:0 0 10px}
+.card{border:1px solid #e5e7eb;border-radius:8px;padding:8px 10px;background:#f9fafb;min-height:44px}
+.status{display:flex;align-items:center;gap:8px;font-weight:600}
+.dot{width:10px;height:10px;border-radius:50%;background:#9ca3af;flex:none}
+.dot.info{background:#3b82f6}.dot.work{background:#f59e0b}.dot.ok{background:#16a34a}.dot.err{background:#dc2626}
+.detail{color:#4b5563;margin-top:3px;word-break:break-word}
+.text{font:600 15px ui-monospace,Consolas,monospace;letter-spacing:1px;margin-top:4px}
+.row{display:flex;gap:8px;margin:10px 0}
+button{flex:1;padding:7px 8px;border:1px solid #2563eb;border-radius:6px;background:#2563eb;color:#fff;cursor:pointer;font:inherit}
+button.alt{background:#fff;color:#2563eb}
+button:disabled{opacity:.5;cursor:default}
+.auto{display:block;margin-bottom:6px}
+.note{color:#6b7280;font-size:12px;margin:6px 0 0}

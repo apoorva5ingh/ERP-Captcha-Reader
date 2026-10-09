@@ -1,0 +1,43 @@
+{
+  "manifest_version": 3,
+  "name": "College ERP CAPTCHA Autofill",
+  "version": "1.0.0",
+  "description": "Reads the plain image CAPTCHA on my own college ERP login page with local OCR and fills the CAPTCHA box. Never submits the form.",
+  "minimum_chrome_version": "116",
+  "permissions": ["offscreen", "storage"],
+  "host_permissions": ["https://uuerp.uudoon.in/*"],
+  "background": {
+    "service_worker": "src/background/service-worker.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://uuerp.uudoon.in/*"],
+      "js": [
+        "src/config.js",
+        "src/content/captcha-detector.js",
+        "src/content/image-processing.js",
+        "src/content/captcha-ocr.js",
+        "src/content/content.js"
+      ],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ],
+  "action": {
+    "default_title": "ERP CAPTCHA Autofill",
+    "default_popup": "src/popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'; connect-src 'self'"
+  }
+}

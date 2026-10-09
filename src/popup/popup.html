@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ERP CAPTCHA Autofill</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <h1>ERP CAPTCHA Autofill</h1>
+    <div class="card">
+      <div class="status"><span id="dot" class="dot"></span><span id="status">Checking page...</span></div>
+      <div id="detail" class="detail"></div>
+      <div id="text" class="text"></div>
+    </div>
+    <div class="row">
+      <button id="read">Read CAPTCHA</button>
+      <button id="refresh" class="alt">Refresh CAPTCHA</button>
+    </div>
+    <label class="auto"><input type="checkbox" id="auto"> Read automatically when the page loads</label>
+    <p class="note">Runs locally. Never submits the form, never stores credentials.</p>
+    <script src="popup.js"></script>
+  </body>
+</html>
